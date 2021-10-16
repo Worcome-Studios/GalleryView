@@ -1,0 +1,2 @@
+# GalleryView
+Visor de imagenes
