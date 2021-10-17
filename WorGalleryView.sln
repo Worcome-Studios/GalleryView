@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WorGalleryView", "WorGalleryView\WorGalleryView.vbproj", "{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18761A5F-138D-493B-A3BE-9FF63FB9F3C3}
+	EndGlobalSection
+EndGlobal
