@@ -1,21 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C41A0DE2-D941-4DB1-AC9B-B2C11CA7DE58}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{293317ED-A7FB-4CB4-BED5-8CFE6235535B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Wor_Gallery_View.My.MyApplication</StartupObject>
-    <RootNamespace>Wor_Gallery_View</RootNamespace>
+    <StartupObject>WorGalleryView.My.MyApplication</StartupObject>
+    <RootNamespace>WorGalleryView</RootNamespace>
     <AssemblyName>WorGalleryView</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Criz\Desktop\Wor GalleryView\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://mail.google.com/mail/%3fview=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=koltyrstudios%40gmail.com</SupportUrl>
+    <ErrorReportUrl>https://mail.google.com/mail/%3fview=cm&amp;fs=1&amp;tf=1&amp;source=mailto&amp;to=koltyrstudios%40gmail.com</ErrorReportUrl>
+    <TargetCulture>es</TargetCulture>
+    <ProductName>Wor GalleryView</ProductName>
+    <PublisherName>Worcome Studios</PublisherName>
+    <SuiteName>Worcome Apps</SuiteName>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>30.09.20.19</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -24,8 +49,8 @@
     <DocumentationFile>WorGalleryView.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -46,7 +71,34 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GalleryView.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D8C4939802BEE1408DDC02C94BE55463D5543C6F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WorGalleryView_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\Eazy CAM\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\Eazy CAM\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -70,6 +122,62 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppHelper.designer.vb">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService.vb" />
+    <Compile Include="AppSupport.designer.vb">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppSupport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppUpdate.designer.vb">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAPTURA.Designer.vb">
+      <DependentUpon>CAPTURA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CAPTURA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDITOR.Designer.vb">
+      <DependentUpon>EDITOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EDITOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadeArchivos.Designer.vb">
+      <DependentUpon>ListadeArchivos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListadeArchivos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visor.Designer.vb">
+      <DependentUpon>Visor.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -87,14 +195,43 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppHelper.resx">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSupport.resx">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppUpdate.resx">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAPTURA.resx">
+      <DependentUpon>CAPTURA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDITOR.resx">
+      <DependentUpon>EDITOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadeArchivos.resx">
+      <DependentUpon>ListadeArchivos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visor.resx">
+      <DependentUpon>Visor.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -105,5 +242,61 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adelante.png" />
+    <None Include="Resources\Atras.png" />
+    <None Include="Resources\Barra.png" />
+    <None Include="Resources\BarraArriba.png" />
+    <None Include="Resources\Diapositiva.png" />
+    <None Include="Resources\Pause.png" />
+    <None Include="Resources\Lupa-.png" />
+    <None Include="Resources\Lupa+.png" />
+    <None Include="Resources\LupaMAS.png" />
+    <None Include="Resources\LupaMENOS.png" />
+    <None Include="Resources\Button-Close-icon.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\Folder-48.png" />
+    <None Include="Resources\New-32.png" />
+    <None Include="Resources\Save-32.png" />
+    <None Include="Resources\WebCam Logo.png" />
+    <None Include="Resources\Ajustes Logo.png" />
+    <None Include="Resources\Worcome Corp PLN.png" />
+    <None Include="Resources\Ball-info-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SistemTrail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GalleryView.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

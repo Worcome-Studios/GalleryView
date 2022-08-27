@@ -53,6 +53,54 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\Public\Pictures")>  _
+        Public Property ImageDir() As String
+            Get
+                Return CType(Me("ImageDir"),String)
+            End Get
+            Set
+                Me("ImageDir") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("3")>  _
+        Public Property DiapositivaTimer() As String
+            Get
+                Return CType(Me("DiapositivaTimer"),String)
+            End Get
+            Set
+                Me("DiapositivaTimer") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property ActiveNotify() As Boolean
+            Get
+                Return CType(Me("ActiveNotify"),Boolean)
+            End Get
+            Set
+                Me("ActiveNotify") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property OfflineMode() As Boolean
+            Get
+                Return CType(Me("OfflineMode"),Boolean)
+            End Get
+            Set
+                Me("OfflineMode") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
@@ -64,9 +112,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.Wor_Gallery_View.My.MySettings
+        Friend ReadOnly Property Settings() As Global.WorGalleryView.My.MySettings
             Get
-                Return Global.Wor_Gallery_View.My.MySettings.Default
+                Return Global.WorGalleryView.My.MySettings.Default
             End Get
         End Property
     End Module

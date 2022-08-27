@@ -1,37 +1,39 @@
 ﻿Imports System.Resources
+
 Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
-' La información general de un ensamblado se controla mediante el siguiente 
-' conjunto de atributos. Cambie estos valores de atributo para modificar la información
-' asociada con un ensamblado.
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
 
-' Revisar los valores de los atributos del ensamblado
+' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Visualizador de imágenes")>
-<Assembly: AssemblyDescription("Visualizador de imágenes")>
-<Assembly: AssemblyCompany("Worcome Studios")>
+<Assembly: AssemblyTitle("Visualizador de Imagenes")>
+<Assembly: AssemblyDescription("Visualiza tu Galeria de Imagenes")>
+<Assembly: AssemblyCompany("Worcome Studios")> 
 <Assembly: AssemblyProduct("GalleryView")>
-<Assembly: AssemblyCopyright("Copyright © 2021 Worcome Studios. Algunos derechos reservados.")>
-<Assembly: AssemblyTrademark("Worcome Studios")>
+<Assembly: AssemblyCopyright("Copyright © 2020 Worcome Studios. Todos los Derechos Reservados.")>
+<Assembly: AssemblyTrademark("Worcome Studios")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(False)> 
 
-'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("5630976d-8e91-4711-98c8-17e7da7b6f5f")>
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("5c8982ef-c5de-438a-b0aa-b0da718fb342")>
 
-' La información de versión de un ensamblado consta de los cuatro valores siguientes:
+' Version information for an assembly consists of the following four values:
 '
-'      Versión principal
-'      Versión secundaria
-'      Número de compilación
-'      Revisión
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
 '
-' Puede especificar todos los valores o utilizar los números de compilación y de revisión predeterminados
-' mediante el carácter '*', como se muestra a continuación:
-' <Assembly: AssemblyVersion("1.0.*")>
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("16.0.0.0")>
-<Assembly: AssemblyFileVersion("16.0.0.0")>
-<Assembly: NeutralResourcesLanguage("es")>
+<Assembly: AssemblyVersion("15.4.1.0")>
+<Assembly: AssemblyFileVersion("13.09.20.20")>
+
+<Assembly: NeutralResourcesLanguageAttribute("es")> 
